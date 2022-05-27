@@ -49,3 +49,15 @@ UseSTARTTLS=YES
 ./2_send_mail.sh 
 
 note : program will send mail if you have stop your service as mention in step 9 other this program will do nothing.
+
+# Command to run shell script 4
+
+./4_lamp_setup.sh
+
+# Command to run shell script 5
+
+./5_remove_dup.sh
+
+note : this will delete file mention in Demo1.
+
+
