@@ -48,4 +48,4 @@ UseSTARTTLS=YES
 
 ./2_send_mail.sh 
 
-note : program will send mail if you have stop your service as mention in step 9.
+note : program will send mail if you have stop your service as mention in step 9 other this program will do nothing.
