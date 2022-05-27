@@ -18,16 +18,34 @@ Instruction : -
 
 FromLineOverride=YES
 
-root=postmaster
+root=your email id
 
-mailhub=smtp.your-domain.com:587
+mailhub=smtp.gmail.com:587
 
-hostname=ubuntu2004
+#hostname=system user name
 
-AuthUser=hiteshjethva@your-domain.com
+hostname=savera
+
+AuthUser=your email id #same as above email id
 
 AuthPass=your-password
 
 FromLineOverride=YES
 
 UseSTARTTLS=YES
+
+5. Turn off two verfication and turn on less secure app setting from account setting of email id which you have mention.
+
+6. copy myownservice.service file to /etc/systemd/system/
+
+7. open myownservice.service with admin right you will see ExecStart = some path.delete that path and enter complete path of 2_myownservice.sh  
+
+8. sudo systemctl start myownservice ->this will start your service
+
+9. sudo systemctl stop myownservice ->this will stop your service
+
+# Command to run shell script 2
+
+./2_send_mail.sh 
+
+note : program will send mail if you have stop your service as mention in step 9.
