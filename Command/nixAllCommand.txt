@@ -1,0 +1,51 @@
+Q1. Your client chipkart has a tig trillion day sale & the server has got a sudden spike of requests, you need to analyze the load appearing on server before it reaches the max limit, so that you can analyze within how much time you can scale out your infrastructure.Find out the average load, server is taking here along with the free memory available.
+
+=> command 1 : uptime 		-> for average load on the server
+=> command 2 : free -g 	-> get free space availabe on server in gb
+
+
+
+
+
+
+Q4. You were running a django application server & you stopped the executing process & next time you went to start the app server, you found out that the port is already in use. What steps you will take to analyze the issue & then start the django app server
+
+=> command : netstat -lntp | grep ":port_number"
+=> eg  netstat -lntp | grep ":8080" 		-> it will return the process running on particular port.
+
+
+
+
+
+
+
+
+Q5. Your server went down & your developer found that a recent commit had a typo in the source code which had put the server down. Now you have to find the number of occurrences of that typo in the source code file without opening the file. Also, find the occurence of that typo with respect to line number of file.
+
+=> command : cat source_file | grep -o "typo" | wc -l 	-> return count of typo in whole file
+
+
+
+
+
+
+
+
+
+
+
+Q6.  You created a systemd service for running a backend application program & you would like to check the logs of that service to know whether it failed & caused your application to stop.
+
+=> systemctl status myownservice -> this will return status of myownservice.
+
+
+
+
+
+
+
+
+
+Q7. Suppose your linux distro is running out of space, how can you check the available storage space
+
+=> command : df -h --total | tail -1
