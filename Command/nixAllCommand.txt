@@ -8,6 +8,28 @@ Q1. Your client chipkart has a tig trillion day sale & the server has got a sudd
 
 
 
+Q2.During the nginx setup on the server, you have written your own custom config file, now you need to place this file in /etc/nginx/sites-available/ & /etc/nginx/sites-enabled/ directories. Also, after you move this config file in relevant directory(s), you also need to make sure that if you update your config file in /etc/nginx/sites-available/
+It should get auto updated in /etc/nginx/sites-enabled/ directory without the need to manually update it.
+
+=> command 1 : cd /etc/nginx/sites-available/		-> navigate to particular directory
+=> command 2 : nano myownconfig 			-> create new file.
+   [Note : Add some text]
+=> command 3 : ln myownconfig /etc/nginx/sites-enabled/ -> create hardlink to particular directory
+   [Note : This command will also create myownconfig to particular directory with same content]
+
+
+
+
+
+Q3.You are closely working with a developer to catch an error in the api call, so you are asked to monitor real time access logs of nginx web server, this log file has a huge amount of data which you cannot risk to open all at once which might take time. Assuming recent data gets appended in the access log file, write your step to check the real time logs.
+
+=> cat /var/log/syslog | tail -10
+
+
+
+
+
+
 Q4. You were running a django application server & you stopped the executing process & next time you went to start the app server, you found out that the port is already in use. What steps you will take to analyze the issue & then start the django app server
 
 => command : netstat -lntp | grep ":port_number"
